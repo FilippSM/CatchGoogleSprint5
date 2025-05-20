@@ -1,8 +1,10 @@
+import { GameStatuses } from "./GAME_STATUSES"
+
 export class Game {
-    hello() {
-        return 'hello world'
+    #gameStatus = GameStatuses.PENDING
+
+
+    get status() {
+        return this.#gameStatus
     }
 }
-
-const game = new Game()
-console.log(game.hello())

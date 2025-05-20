@@ -1,8 +1,9 @@
 import { Game } from "./game.js"
+import { GameStatuses } from "./GAME_STATUSES.js"
 
 describe('game', () => {
-    it('should say hello world', () => {
+    it('should have Pending status after creating', () => {
         const game = new Game()
-        expect(game.hello()).toBe('hello world')
+        expect(game.status).toBe(GameStatuses.PENDING)
     })
 })
